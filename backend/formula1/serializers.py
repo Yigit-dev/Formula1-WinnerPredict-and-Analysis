@@ -1,8 +1,11 @@
 from rest_framework import serializers
-from .models import TODO
+from .models import FormulaDetail
 
-class TODOSerializer(serializers.ModelSerializer):
+
+class FormulaDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = TODO
+        model = FormulaDetail
         fields = "__all__"
+
+    

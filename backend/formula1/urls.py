@@ -1,7 +1,7 @@
-from rest_framework import routers
-from . import views
+from django.urls import path, include
+from . import views as api_views
 
-router = routers.DefaultRouter()
-router.register("api/todo", views.TODOViewSet, basename = "todo")
+urlpatterns = [
+    path('formula/', api_views.FormulaListCreateAPIView.as_view(), name='formula-list')
+]
 
-urlpatterns = router.urls
