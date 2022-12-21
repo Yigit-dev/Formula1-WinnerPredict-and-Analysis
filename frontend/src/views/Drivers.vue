@@ -1,7 +1,7 @@
 <template>
   <section>
     <Loading v-if="loading"/>
-    <Table v-if="!loading" :data="data" :tableData="tableData" title="Formula 1"/>
+    <Table v-if="!loading" :data="data" :tableData="tableData" title="Drivers"/>
   </section>
 </template>
 
@@ -16,14 +16,19 @@ export default {
     return{
       data: [],
       loading: true,
-      tableData: ["Grand Prix","Date","Winner","Car","Laps","Country","weather","weather_warm","weather_cold","weather_dry","weather_wet","weather_cloudy"]
+      tableData: ["Pos","Driver","Nationality","Car","PTS","Year"]
     }
   },
   async created() {
-    await this.$appAxios.get("/formula1")
-      .then(response => this.data = Object.values(response.data)[0].formula1)
+    await this.$appAxios.get("/drivers")
+      .then(response => this.data = Object.values(response.data)[0].drivers)
       .then(this.loading = !this.loading)
       .catch(error => console.log(error))
   },
 }
 </script>
+
+<style scoped>
+
+
+</style>
