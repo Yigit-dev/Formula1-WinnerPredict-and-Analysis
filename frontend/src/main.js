@@ -1,12 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import vuetify from './plugins/vuetify'
-import { loadFonts } from './plugins/webfontloader'
+import "./assets/main.css"
+import VideoBackground from 'vue-responsive-video-background-player'
+import { Plugin } from 'vue-responsive-video-background-player'
 
-loadFonts()
 
 createApp(App)
   .use(router)
-  .use(vuetify)
+  .use(VideoBackground)
+  .use(Plugin)
   .mount('#app')

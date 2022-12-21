@@ -1,22 +1,24 @@
 <template>
 <div>
-    <Navigation />
+  <Navigation />
+  <video-background />
     <div class="container">
-        <v-main class="pageAnimation">
+        <main class="pageAnimation">
             <slot />
-        </v-main>
+        </main>
     </div>
-    <Footer />
+  <Footer />
 </div>
 </template>
 
 <script>
+import VideoBackground from '../VideoBackground.vue';
 import Footer from './Footer.vue';
 import Navigation from './Navigation.vue';
 
 export default {
     name: 'Layout',
-    components: { Navigation, Footer }
+    components: { Navigation, Footer, VideoBackground }
 }
 </script>
 
@@ -27,7 +29,7 @@ export default {
     transition: background-color 0.5s;
     width: 100%;
     min-height: 100vh;
-    padding: 4vw;
+    padding: 4vw 10vw;
     overflow: hidden;
   }
   main{

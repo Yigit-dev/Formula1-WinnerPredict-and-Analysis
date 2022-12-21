@@ -1,9 +1,7 @@
 :root {
-  --vs-primary: 91, 60, 196
-  --vs-success: 23, 201, 100
-  --vs-danger: 242, 19, 93
-  --vs-warn: 254, 130, 0
-  --vs-dark: 36, 33, 69
+  --c-formula1: #e10600;
+  --c-primary: #2C2C3B;
+  --c-secondary: #444455;
 }
 
 *,
