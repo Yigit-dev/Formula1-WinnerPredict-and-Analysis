@@ -281,7 +281,7 @@ def ConvertToJSON(table, database):
     convertedData = table.to_json(orient = "records")
     SaveToDatabase(convertedData, f"formula1_{database}")
 
-# ConvertToJSON(team_table(), "teams")
-# ConvertToJSON(races_table(), "races")
-# ConvertToJSON(drivers_table(), "drivers")
+ConvertToJSON(team_table(), "teams")
+ConvertToJSON(races_table(), "races")
+ConvertToJSON(drivers_table(), "drivers")
 ConvertToJSON(general_races_data(), "formula1")

@@ -61,7 +61,7 @@ CORS_ORIGIN_ALLOW_ALL = True  # this allows all domains
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://localhost:8080",
-    "http://127.0.0.1:8000"
+    "http://127.0.0.1:8000",
 ]
 
 ROOT_URLCONF = 'src.urls'
