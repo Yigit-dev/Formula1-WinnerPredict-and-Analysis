@@ -1,13 +1,18 @@
 <template>
-  <h1>Test</h1>
+  <section>
+    <Table />
+  </section>
 </template>
 
 <script>
+import Table from '../components/Table.vue'
 export default {
+  components: { Table },
   name: 'HomeView'  
 }
 </script>
 
-<style>
-  
+<style scoped>
+
+
 </style>
