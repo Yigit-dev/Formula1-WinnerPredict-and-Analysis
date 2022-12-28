@@ -1,7 +1,7 @@
 <template>
   <section>
     <Loading v-if="loading"/>
-    <Table v-if="!loading" :data="data" :tableData="tableData" title="Formula 1"/>
+    <Table v-if="!loading" :data="data" :tableData="tableData" :searchFilter="searchFilter" title="Formula 1"/>
   </section>
 </template>
 
@@ -16,7 +16,12 @@ export default {
     return{
       data: [],
       loading: true,
-      tableData: ["Grand Prix","Date","Winner","Car","Laps","Country","weather","weather_warm","weather_cold","weather_dry","weather_wet","weather_cloudy"]
+      tableData: ["Grand Prix","Date","Winner","Car","Laps","Country","weather","weather_warm","weather_cold","weather_dry","weather_wet","weather_cloudy"],
+      searchFilter: [
+        {name: "Grand Prix", checked: true},
+        {name: "Car"},
+        {name: "Winner"}
+      ]
     }
   },
   async created() {

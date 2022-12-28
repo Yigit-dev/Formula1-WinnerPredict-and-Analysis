@@ -1,7 +1,7 @@
 <template>
   <section>
     <Loading v-if="loading"/>
-    <Table v-if="!loading" :data="data" :tableData="tableData" title="Teams"/>
+    <Table v-if="!loading" :data="data" :tableData="tableData" :searchFilter="searchFilter" title="Teams"/>
   </section>
 </template>
 
@@ -16,7 +16,13 @@ export default {
     return{
       data: [],
       loading: true,
-      tableData: ["Pos","Team","PTS","Year"]
+      tableData: ["Pos","Team","PTS","Year"],
+      searchFilter: [
+        {name: "Pos"},
+        {name: "Team", checked: true},
+        {name: "PTS"},
+        {name: "Year",}
+      ]
     }
   },
   async created() {
