@@ -30,5 +30,6 @@ export default {
       .then(this.loading = !this.loading)
       .catch(error => console.log(error))
   },
+
 }
 </script>

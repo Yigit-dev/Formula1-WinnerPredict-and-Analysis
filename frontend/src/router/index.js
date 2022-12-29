@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/drivers',
       name: 'drivers',
       component: () => import("../views/Drivers.vue")
+    },
+    {
+      path: '/chart',
+      name: 'chart',
+      component: () => import("../views/Chart.vue")
     }
   ]
 })
