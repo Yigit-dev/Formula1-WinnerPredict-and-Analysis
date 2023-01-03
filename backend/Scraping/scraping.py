@@ -7,7 +7,8 @@ import sqlite3
 import random
 from datetime import datetime
 
-db = sqlite3.connect('E:\\Formula1-WinnerPredict-and-Analysis\\backend\\db.sqlite3')
+#Attention!! The given path is set according to the developer, you need to set the path according to yourself and make sure that it is correct.
+db = sqlite3.connect('E:\\Formula1-WinnerPredict-and-Analysis\\backend\\db.sqlite3') 
 cursor = db.cursor()
 
 def SaveToDatabase(data, table):
